@@ -62,7 +62,7 @@ SECURITY_KEYWORDS = [
 
 # ── FLASK APP ─────────────────────────────────────────────────
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://noticias44.netlify.app", "http://localhost:5000", "http://127.0.0.1:5000", "null"])
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
 cache = {"articles": [], "cni_mentions": [], "last_update": None, "stats": {}}
